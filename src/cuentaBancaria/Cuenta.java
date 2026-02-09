@@ -10,7 +10,7 @@ public class Cuenta {
 
         if (saldoInicial < 0) {
             this.saldo = 0;
-            System.out.println("No puedes tener un saldo negativo!!");
+            System.out.println("\nNo puedes tener un saldo negativo!!");
         } else {
             this.saldo = saldoInicial;
         }
@@ -19,7 +19,7 @@ public class Cuenta {
     public void ingresar(int saldoIngresar) {
         if (saldoIngresar > 0) {
             saldo = saldo + saldoIngresar;
-            System.out.println("Ingresados: " + saldoIngresar + "€");
+            System.out.println("Ingresados: " + saldoIngresar + "€" + "\nSaldo actual: " + saldo + "€");
         } else {
             System.out.println("ERROR!! La cantidad a ingresar debe ser positiva");
         }
@@ -28,6 +28,7 @@ public class Cuenta {
     public void retirar(int saldoRetirar) {
         if (saldoRetirar > 0 && saldo >= saldoRetirar) {
             saldo = saldo - saldoRetirar;
+            System.out.println("Retirados: " + saldoRetirar + "€" + "\nSaldo actual: " + saldo + "€");
         } else if (saldo < saldoRetirar) {
             System.out.println("ERROR!! Estás intentando retirar una cantidad superior a tu saldo");
         } else {
@@ -37,6 +38,6 @@ public class Cuenta {
 
     public void estadoCuenta() {
         System.out.println("Nombre: " + titular.getNombre() + " (" + titular.getDNI() + ")");
-        System.out.println("Saldo actual " + saldo + "€");
+        System.out.println("Saldo actual: " + saldo + "€");
     }
 }
