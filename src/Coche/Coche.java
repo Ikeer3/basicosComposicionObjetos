@@ -3,17 +3,20 @@ package Coche;
 public class Coche {
 
     private String marca;
-    private Motor motores;
+    private Motor motor;
 
-    public Coche(String marca) {
+    public Coche(String marca, int potenciaMotor) {
         this.marca = marca;
+        this.motor = new Motor(potenciaMotor);
     }
 
-    public String getMarca() {
-        return marca;
+    public void arrancar() {
+        System.out.println("\nGirando la llave del... " + marca);
+        motor.activar();
     }
 
-    public void infoCoche() {
-        System.out.println("\nEl coche de la marca: " + marca + " tiene una potencia de " + motores.getPotencia());
+    public void apagar() {
+        System.out.println("\nQuitando el contacto del... " + marca);
+        motor.desactivar();
     }
 }

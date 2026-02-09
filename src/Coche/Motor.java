@@ -10,7 +10,7 @@ public class Motor {
         this.estado = false;
     }
 
-    public void arrancar() {
+    public void activar() {
         if (!estado) {
             estado = true;
             System.out.println("El coche con " + potencia + "CV se ha encendido!!");
@@ -19,7 +19,7 @@ public class Motor {
         }
     }
 
-    public void apagar() {
+    public void desactivar() {
         if (estado) {
             estado = false;
             System.out.println("El coche se detiene y se apaga");
