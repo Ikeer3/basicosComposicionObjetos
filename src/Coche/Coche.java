@@ -11,12 +11,12 @@ public class Coche {
     }
 
     public void arrancar() {
-        System.out.println("\nGirando la llave del... " + marca);
+        System.out.println("\nGirando la llave del..." + marca);
         motor.activar();
     }
 
     public void apagar() {
-        System.out.println("\nQuitando el contacto del... " + marca);
+        System.out.println("\nQuitando el contacto del..." + marca);
         motor.desactivar();
     }
 }
