@@ -3,10 +3,18 @@ package cuentaBancaria;
 public class Cliente {
 
     private String nombre;
-    private int DNI;
+    private String DNI;
 
-    public Cliente(String nombre, int DNI) {
+    public Cliente(String nombre, String DNI) {
         this.nombre = nombre;
         this.DNI = DNI;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getDNI() {
+        return DNI;
     }
 }
