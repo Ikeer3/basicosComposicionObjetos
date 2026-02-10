@@ -5,9 +5,9 @@ public class Biblioteca {
     private String nombre;
     private Libro[] catalogo;
 
-    public Biblioteca(String nombre, Libro[] libros) {
+    public Biblioteca(String nombre, Libro[] catalogo) {
         this.nombre = nombre;
-        this.catalogo = new Libro[3];
+        this.catalogo = catalogo;
     }
 
     public String getNombre() {
@@ -22,6 +22,28 @@ public class Biblioteca {
         nuevo[nuevo.length - 1] = l;
         catalogo = nuevo;
     }
+
+    /*
+    public void eliminarLibros() {
+        int numeroEliminar = 0;
+
+        for (Libro l: catalogo) {
+            if (l.getPrecio() > cantidad) {
+                numeroEliminar++;
+            }
+        }
+
+        Libro[] resultado = new Libro[catalogo.length - numeroEliminar];
+        int posicionActualAnhadir = 0;
+        for (Libro l: catalogo) {
+            if (l.getPrecio() <= cantidad) {
+                resultado[posicionActualAnhadir] = l;
+                posicionActualAnhadir++;
+            }
+        }
+        catalogo = resultado;
+    }
+    */
 
     public void mostrarLibros() {
         System.out.println("En la biblioteca " + nombre + " hay " + catalogo.length + " libros");
