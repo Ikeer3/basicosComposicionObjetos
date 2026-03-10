@@ -15,10 +15,10 @@ public class Equipo {
     }
 
     public void mostrarInfo() {
-        System.out.println("---BIENVENIDO AL " + nombre + "---");
+        System.out.println("\n---BIENVENIDO AL " + nombre + "---");
         System.out.println("En el " + nombre + " hay " + plantilla.length + " jugadores");
         for (Jugador jugadores: plantilla) {
-            System.out.println(jugadores.getNombre() + " juega en la posición: " + jugadores.getPosicion());
+            System.out.print("\n" + jugadores.getNombre() + " juega en la posición: " + jugadores.getPosicion());
         }
     }
 }
