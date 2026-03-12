@@ -15,7 +15,7 @@ public class Empresa {
     }
 
     public void mostrarEmpleados() {
-        System.out.println("La empresa " + nombre + " tiene " + listaEmpleados.length + " empleados");
+        System.out.println("\nLa empresa " + nombre + " tiene " + listaEmpleados.length + " empleados");
         for (Empleado empleados: listaEmpleados) {
             System.out.println("El empleado " + empleados.getNombre() + " tiene un salario mensual de "
                     + empleados.getSalario() + "€");
@@ -27,6 +27,6 @@ public class Empresa {
         for (Empleado gastoEmpleados: listaEmpleados) {
             salarioTotal = salarioTotal + gastoEmpleados.getSalario();
         }
-        System.out.println("El gasto total en salario de la empresa " + nombre + " asciende a " + salarioTotal + "€");
+        System.out.printf("\nEl gasto total en salario de la empresa " + nombre + " asciende a " + "%.2f€", salarioTotal);
     }
 }
