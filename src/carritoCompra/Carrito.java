@@ -23,4 +23,12 @@ public class Carrito {
             System.out.println("El producto " + productos.getNombre() + " tiene un precio de " + productos.getPrecio() + "€");
         }
     }
+
+    public void CalcularTotalProductos() {
+        double totalProductos = 0.0;
+        for (Producto productos: listaCompra) {
+            totalProductos = totalProductos + productos.getPrecio();
+        }
+        System.out.println("\nEl total de la compra asciende a " + totalProductos + "€");
+    }
 }
