@@ -14,7 +14,7 @@ public class Pedido {
         double precioTotal = 0.0;
         for (Producto productos: listaCompra) {
             precioTotal = precioTotal + productos.getPrecio();
-            System.out.println("El precio total del pedido " + numero + " es " + precioTotal + "€");
         }
+        System.out.println("\nEl precio total del pedido " + numero + " es " + precioTotal + "€");
     }
 }
