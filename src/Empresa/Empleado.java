@@ -7,7 +7,11 @@ public class Empleado {
 
     public Empleado(String nombre, double salario) {
         this.nombre = nombre;
-        this.salario = salario;
+        if (salario < 0) {
+            this.salario = 0;
+        } else {
+            this.salario = salario;
+        }
     }
 
     public String getNombre() {
